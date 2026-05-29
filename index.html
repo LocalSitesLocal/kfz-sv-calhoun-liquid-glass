@@ -1,0 +1,1465 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07090d" />
+    <title>KFZ-Sachverst&auml;ndiger Nils Calhoun | KFZ-Gutachter im Raum Schweinfurt</title>
+    <meta
+      name="description"
+      content="KFZ-Sachverst&auml;ndiger Nils Calhoun aus Grafenrheinfeld: Schadengutachten, Unfallgutachten, Wertgutachten und Fahrzeugbewertungen im Raum Schweinfurt."
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Oxanium:wght@400;600;700;800&display=swap");
+
+      :root {
+        color-scheme: dark;
+        --card: #292524;
+        --ring: #f97316;
+        --input: #44403c;
+        --muted-panel: #292524;
+        --accent: #1e4252;
+        --border-token: #44403c;
+        --primary: #f97316;
+        --secondary: #57534e;
+        --background: #1c1917;
+        --foreground: #f5f5f4;
+        --muted-foreground: #a8a29e;
+        --accent-foreground: #e7e5e4;
+        --primary-foreground: #ffffff;
+        --font-mono: "Fira Code", monospace;
+        --font-sans: Oxanium, "Segoe UI Variable", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+        --font-serif: Merriweather, Georgia, serif;
+        --bg: var(--background);
+        --ink: var(--foreground);
+        --muted: var(--muted-foreground);
+        --soft: var(--accent-foreground);
+        --line: rgba(255, 255, 255, 0.18);
+        --line-strong: rgba(255, 255, 255, 0.32);
+        --glass: rgba(255, 255, 255, 0.08);
+        --glass-strong: rgba(255, 255, 255, 0.14);
+        --gold: var(--primary);
+        --amber: #eab308;
+        --cyan: #0ea5e9;
+        --red: #dc2626;
+        --green: #65e2a2;
+        --radius-xl: 34px;
+        --radius-lg: 24px;
+        --shadow: 0 30px 90px rgba(0, 0, 0, 0.46);
+        --maps: "https://www.google.com/maps/place/KFZ-Sachverst%C3%A4ndiger+Nils+Calhoun/@50.0041155,10.1963686,15z/data=!4m6!3m5!1s0x47a259c963fb60f7:0xde3efe15b50f9aa5!8m2!3d50.0058477!4d10.1940272!16s%2Fg%2F11k4hhm_xt?entry=ttu";
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at 18% 14%, rgba(249, 115, 22, 0.25), transparent 28rem),
+          radial-gradient(circle at 88% 12%, rgba(14, 165, 233, 0.2), transparent 30rem),
+          radial-gradient(circle at 48% 52%, rgba(255, 255, 255, 0.08), transparent 28rem),
+          linear-gradient(140deg, #0c0a09 0%, #1c1917 44%, #090706 100%);
+        color: var(--ink);
+        font-family: var(--font-sans);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -4;
+        opacity: 0.32;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+        background-size: 74px 74px;
+        mask-image: linear-gradient(180deg, #000, transparent 85%);
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -3;
+        pointer-events: none;
+        opacity: 0.18;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+        mix-blend-mode: soft-light;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .ambient {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .beam,
+      .orb {
+        position: absolute;
+        filter: blur(34px);
+        opacity: 0.55;
+        animation: floaty 10s ease-in-out infinite alternate;
+      }
+
+      .beam {
+        width: 46vw;
+        height: 14vw;
+        top: 18%;
+        left: -10%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, rgba(249, 115, 22, 0.34), rgba(14, 165, 233, 0.12));
+        transform: rotate(-17deg);
+      }
+
+      .orb.one {
+        width: 24rem;
+        height: 24rem;
+        right: -8rem;
+        top: 8rem;
+        border-radius: 999px;
+        background: rgba(14, 165, 233, 0.2);
+        animation-delay: -3s;
+      }
+
+      .orb.two {
+        width: 22rem;
+        height: 22rem;
+        left: 12%;
+        bottom: 18%;
+        border-radius: 999px;
+        background: rgba(249, 115, 22, 0.14);
+        animation-delay: -6s;
+      }
+
+      .cursor-glow {
+        position: fixed;
+        width: 28rem;
+        height: 28rem;
+        left: var(--mx, 50%);
+        top: var(--my, 50%);
+        z-index: -1;
+        pointer-events: none;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(249, 115, 22, 0.14), transparent 62%);
+        transform: translate(-50%, -50%);
+        transition: opacity 220ms ease;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .glass {
+        position: relative;
+        border: 1px solid var(--line);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.045) 46%, rgba(255, 255, 255, 0.11)),
+          var(--glass);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.42),
+          inset 0 -24px 36px rgba(255, 255, 255, 0.035),
+          var(--shadow);
+        backdrop-filter: blur(24px) saturate(1.45);
+        -webkit-backdrop-filter: blur(24px) saturate(1.45);
+        transition:
+          transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
+          border-color 240ms ease,
+          background 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .glass::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        background: linear-gradient(115deg, rgba(255, 255, 255, 0.5), transparent 30%, transparent 68%, rgba(255, 255, 255, 0.16));
+        opacity: 0.58;
+        mask-image: linear-gradient(#000, transparent 68%);
+      }
+
+      .glass:hover {
+        transform: translateY(-6px) scale(1.018);
+        border-color: var(--line-strong);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.065) 48%, rgba(255, 255, 255, 0.16)),
+          var(--glass-strong);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.58),
+          inset 0 -26px 42px rgba(255, 255, 255, 0.055),
+          0 34px 92px rgba(0, 0, 0, 0.52);
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 20;
+        transform: translateY(-140%);
+        border-radius: 999px;
+        padding: 12px 16px;
+        background: #fff;
+        color: #07090d;
+        font-weight: 800;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .topbar {
+        position: fixed;
+        top: 18px;
+        left: 50%;
+        z-index: 10;
+        width: min(1180px, calc(100% - 32px));
+        transform: translateX(-50%);
+        border-radius: 999px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .topbar.glass:hover {
+        transform: translateX(-50%) translateY(-2px);
+      }
+
+      .brandmark {
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 14px 0 8px;
+        border-radius: 999px;
+      }
+
+      .logo {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #fff, #e7e5e4 56%, #f97316);
+        color: #0a0b0f;
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        box-shadow: 0 0 36px rgba(249, 115, 22, 0.24);
+      }
+
+      .brand-name {
+        display: grid;
+        gap: 2px;
+        font-weight: 850;
+        letter-spacing: -0.03em;
+      }
+
+      .brand-name span {
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .nav a,
+      .mini-cta {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 999px;
+        padding: 0 14px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.9rem;
+        font-weight: 750;
+        transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+      }
+
+      .nav a:hover,
+      .mini-cta:hover {
+        transform: translateY(-2px) scale(1.04);
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      .mini-cta {
+        background: rgba(255, 255, 255, 0.92);
+        color: #08090d;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        padding: 132px 0 74px;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+        gap: clamp(34px, 6vw, 78px);
+        align-items: center;
+      }
+
+      .copy {
+        display: grid;
+        gap: 24px;
+      }
+
+      .eyebrow,
+      .chip,
+      .tag {
+        width: fit-content;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        border-radius: 999px;
+        color: #f0f1f4;
+        font-size: 0.72rem;
+        font-weight: 850;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow {
+        padding: 9px 13px;
+        animation: fade-slide 0.72s ease both;
+      }
+
+      .status-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        background: var(--green);
+        box-shadow: 0 0 0 6px rgba(101, 226, 162, 0.15), 0 0 22px rgba(101, 226, 162, 0.48);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 780px;
+        font-size: clamp(3.1rem, 7.4vw, 7.05rem);
+        line-height: 0.9;
+        font-weight: 730;
+        letter-spacing: -0.055em;
+        text-wrap: balance;
+        animation: fade-slide 0.72s 0.08s ease both;
+      }
+
+      .warm {
+        color: transparent;
+        background: linear-gradient(120deg, #fff 8%, #fed7aa 48%, #f97316 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      .lead {
+        max-width: 650px;
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2vw, 1.24rem);
+        line-height: 1.7;
+        animation: fade-slide 0.72s 0.16s ease both;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 13px;
+        animation: fade-slide 0.72s 0.24s ease both;
+      }
+
+      .button {
+        min-height: 54px;
+        border: 0;
+        border-radius: 999px;
+        padding: 0 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        font-weight: 850;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-3px) scale(1.04);
+      }
+
+      .button.primary {
+        background: rgba(255, 255, 255, 0.93);
+        color: #07090d;
+        box-shadow: 0 20px 54px rgba(255, 255, 255, 0.15);
+      }
+
+      .button.primary:hover {
+        box-shadow: 0 24px 70px rgba(249, 115, 22, 0.22);
+      }
+
+      .button.ghost {
+        color: #fff;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        display: block;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2;
+      }
+
+      .hero-notes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        animation: fade-slide 0.72s 0.32s ease both;
+      }
+
+      .chip,
+      .tag {
+        padding: 8px 11px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.065);
+        backdrop-filter: blur(18px);
+      }
+
+      .visual-stack {
+        position: relative;
+        min-height: 620px;
+        animation: fade-slide 0.72s 0.28s ease both;
+      }
+
+      .photo-card {
+        position: absolute;
+        overflow: hidden;
+        border-radius: var(--radius-xl);
+      }
+
+      .photo-card.main {
+        inset: 24px 0 92px 8%;
+      }
+
+      .photo-card.small {
+        right: 6%;
+        bottom: 18px;
+        width: min(310px, 60%);
+        aspect-ratio: 1.08;
+        z-index: 2;
+      }
+
+      .photo-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, transparent 30%, rgba(5, 6, 8, 0.74)),
+          radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.2), transparent 18rem);
+      }
+
+      .photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.92) contrast(1.04);
+        transform: scale(1.04);
+        transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 700ms ease;
+      }
+
+      .photo-card:hover .photo {
+        transform: scale(1.095);
+        filter: saturate(1.05) contrast(1.08);
+      }
+
+      .fallback-visual {
+        width: 100%;
+        height: 100%;
+        background:
+          radial-gradient(circle at 28% 30%, rgba(255, 255, 255, 0.24), transparent 13rem),
+          linear-gradient(135deg, #1c2026, #08090d 54%, #352514);
+      }
+
+      .floating-panel {
+        position: absolute;
+        left: 0;
+        bottom: 78px;
+        z-index: 3;
+        width: min(350px, 68%);
+        border-radius: 28px;
+        padding: 20px;
+      }
+
+      .pulse-ring {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        z-index: 3;
+        width: 112px;
+        height: 112px;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        color: #0a0b0f;
+        background: rgba(255, 255, 255, 0.9);
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.05;
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.28);
+        animation: pulse 2.2s ease-in-out infinite;
+      }
+
+      .panel-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .panel-title strong {
+        font-size: 1.1rem;
+        letter-spacing: -0.03em;
+      }
+
+      .bar-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 9px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .bar {
+        height: 9px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .bar span {
+        display: block;
+        height: 100%;
+        width: 92%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #fff, #e7e5e4, #f97316);
+        box-shadow: 0 0 24px rgba(249, 115, 22, 0.38);
+        animation: loadbar 1.2s 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+      }
+
+      .mini-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 17px;
+      }
+
+      .mini-stat {
+        border-radius: 18px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.075);
+      }
+
+      .mini-stat strong {
+        display: block;
+        font-size: 1.28rem;
+      }
+
+      .mini-stat span {
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 750;
+      }
+
+      section {
+        position: relative;
+        padding: clamp(54px, 8vw, 108px) 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(260px, 0.55fr);
+        gap: 26px;
+        align-items: end;
+        margin-bottom: 30px;
+      }
+
+      .section-kicker {
+        margin-bottom: 12px;
+        color: var(--gold);
+        font-size: 0.74rem;
+        font-weight: 900;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: clamp(2.2rem, 5vw, 4.6rem);
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+        text-wrap: balance;
+      }
+
+      .section-copy {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .service-card,
+      .step-card,
+      .faq-card,
+      .contact-card {
+        border-radius: var(--radius-lg);
+        padding: 24px;
+      }
+
+      .service-card {
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .icon {
+        width: 52px;
+        height: 52px;
+        display: grid;
+        place-items: center;
+        border-radius: 18px;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.095);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
+      }
+
+      .service-card h3,
+      .step-card h3,
+      .faq-card h3 {
+        margin-top: 20px;
+        font-size: 1.28rem;
+        line-height: 1.18;
+        letter-spacing: -0.035em;
+      }
+
+      .service-card p,
+      .step-card p,
+      .faq-card p {
+        margin-top: 12px;
+        color: var(--muted);
+        line-height: 1.62;
+      }
+
+      .service-list {
+        display: grid;
+        gap: 9px;
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        color: var(--soft);
+        font-size: 0.94rem;
+      }
+
+      .service-list li {
+        display: flex;
+        gap: 9px;
+        align-items: flex-start;
+      }
+
+      .service-list li::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        flex: 0 0 8px;
+        margin-top: 8px;
+        border-radius: 999px;
+        background: var(--gold);
+        box-shadow: 0 0 18px rgba(249, 115, 22, 0.46);
+      }
+
+      .marquee {
+        overflow: hidden;
+        margin-top: 18px;
+        border-block: 1px solid rgba(255, 255, 255, 0.1);
+        mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+      }
+
+      .track {
+        width: max-content;
+        display: flex;
+        gap: 18px;
+        padding: 18px 0;
+        animation: marquee 34s linear infinite;
+      }
+
+      .track span {
+        display: inline-flex;
+        min-width: max-content;
+        align-items: center;
+        gap: 9px;
+        color: rgba(255, 255, 255, 0.72);
+        font-weight: 820;
+        letter-spacing: -0.02em;
+      }
+
+      .track span::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--cyan);
+      }
+
+      .process-wrap {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .callout {
+        min-height: 100%;
+        border-radius: var(--radius-xl);
+        padding: 28px;
+        overflow: hidden;
+      }
+
+      .callout h3 {
+        max-width: 360px;
+        font-size: clamp(1.8rem, 4vw, 3.2rem);
+        line-height: 1;
+        letter-spacing: -0.045em;
+      }
+
+      .callout p {
+        margin-top: 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .step-number {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        color: #090a0e;
+        background: #fff;
+        font-weight: 950;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.72fr);
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .image-feature {
+        position: relative;
+        min-height: 520px;
+        overflow: hidden;
+        border-radius: var(--radius-xl);
+      }
+
+      .image-feature img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.92) contrast(1.05);
+      }
+
+      .image-feature::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 28%, rgba(5, 6, 8, 0.78));
+      }
+
+      .image-caption {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+        z-index: 2;
+        border-radius: 24px;
+        padding: 20px;
+      }
+
+      .image-caption strong {
+        display: block;
+        font-size: 1.35rem;
+        letter-spacing: -0.035em;
+      }
+
+      .image-caption span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .value-card {
+        border-radius: var(--radius-xl);
+        padding: 28px;
+      }
+
+      .value-card h3 {
+        font-size: clamp(1.8rem, 3.4vw, 3rem);
+        line-height: 1;
+        letter-spacing: -0.045em;
+      }
+
+      .value-card p {
+        margin-top: 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .tag-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 24px;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .contact-section {
+        padding-bottom: 38px;
+      }
+
+      .contact-card {
+        border-radius: 36px;
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
+        gap: 24px;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .contact-card h2 {
+        max-width: 780px;
+      }
+
+      .contact-actions {
+        display: grid;
+        gap: 12px;
+      }
+
+      .contact-link {
+        min-height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        border-radius: 999px;
+        padding: 0 18px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        color: #fff;
+        font-weight: 850;
+        transition: transform 180ms ease, background 180ms ease;
+      }
+
+      .contact-link:hover {
+        transform: translateY(-2px) scale(1.025);
+        background: rgba(255, 255, 255, 0.14);
+      }
+
+      .contact-link span {
+        color: var(--muted);
+        font-size: 0.84rem;
+        font-weight: 700;
+      }
+
+      footer {
+        padding: 28px 0 40px;
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 24px;
+        font-size: 0.92rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes fade-slide {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes floaty {
+        from {
+          transform: translate3d(0, 0, 0) rotate(-17deg);
+        }
+        to {
+          transform: translate3d(32px, 28px, 0) rotate(-11deg);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.28);
+          transform: scale(1);
+        }
+        70% {
+          box-shadow: 0 0 0 28px rgba(249, 115, 22, 0);
+          transform: scale(1.04);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+          transform: scale(1);
+        }
+      }
+
+      @keyframes loadbar {
+        from {
+          width: 0;
+        }
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+
+      @media (max-width: 980px) {
+        .topbar {
+          position: absolute;
+          border-radius: 28px;
+          align-items: flex-start;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .hero-grid,
+        .section-head,
+        .process-wrap,
+        .split,
+        .contact-card {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 126px;
+        }
+
+        .visual-stack {
+          min-height: 560px;
+        }
+
+        .service-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .shell {
+          width: min(100% - 24px, 1180px);
+        }
+
+        .topbar {
+          width: min(100% - 24px, 1180px);
+          top: 12px;
+          padding: 8px;
+        }
+
+        .brand-name {
+          font-size: 0.92rem;
+        }
+
+        .mini-cta {
+          padding: 0 12px;
+          font-size: 0.84rem;
+        }
+
+        h1 {
+          font-size: clamp(2.8rem, 16vw, 4.8rem);
+        }
+
+        .actions,
+        .contact-actions {
+          grid-template-columns: 1fr;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .visual-stack {
+          min-height: 470px;
+        }
+
+        .photo-card.main {
+          inset: 4px 0 88px 0;
+        }
+
+        .photo-card.small {
+          width: 62%;
+          right: 0;
+          bottom: 20px;
+        }
+
+        .floating-panel {
+          width: 74%;
+          bottom: 52px;
+        }
+
+        .pulse-ring {
+          width: 86px;
+          height: 86px;
+          top: 42px;
+          right: 14px;
+          font-size: 0.78rem;
+        }
+
+        .service-grid,
+        .steps,
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .image-feature {
+          min-height: 390px;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <div class="ambient" aria-hidden="true">
+      <div class="beam"></div>
+      <div class="orb one"></div>
+      <div class="orb two"></div>
+    </div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="topbar glass" aria-label="Hauptnavigation">
+      <a class="brandmark" href="#main" aria-label="KFZ-Sachverstaendiger Nils Calhoun Start">
+        <span class="logo">NC</span>
+        <span class="brand-name">Nils Calhoun <span>KFZ-Sachverst&auml;ndiger</span></span>
+      </a>
+      <nav class="nav" aria-label="Seitennavigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#wertgutachten">Wertgutachten</a>
+        <a href="#faq">FAQ</a>
+        <a
+          href="https://www.google.com/maps/place/KFZ-Sachverst%C3%A4ndiger+Nils+Calhoun/@50.0041155,10.1963686,15z/data=!4m6!3m5!1s0x47a259c963fb60f7:0xde3efe15b50f9aa5!8m2!3d50.0058477!4d10.1940272!16s%2Fg%2F11k4hhm_xt?entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Adresse</a
+        >
+      </nav>
+      <a class="mini-cta" href="tel:+4915904026857">0159 04026857</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="shell hero-grid">
+          <div class="copy">
+            <div class="eyebrow glass"><span class="status-dot"></span> Schnell erreichbar im Raum Schweinfurt</div>
+            <h1 id="hero-title">
+              Unverschuldeter Unfall?<br />
+              <span class="warm">Ich bin f&uuml;r Sie da.</span>
+            </h1>
+            <p class="lead">
+              KFZ-Sachverst&auml;ndiger Nils Calhoun erstellt unabh&auml;ngige Schadengutachten, Unfallgutachten,
+              Wertgutachten und Fahrzeugbewertungen in Grafenrheinfeld, Schweinfurt und Umgebung.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="tel:+4915904026857">
+                Jetzt anrufen
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.7 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7A2 2 0 0 1 22 16.9Z" /></svg>
+              </a>
+              <a class="button ghost glass" href="mailto:sv-calhoun@web.de">
+                Anfrage senden
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.9 5.7a2 2 0 0 1-2.2 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg>
+              </a>
+            </div>
+            <div class="hero-notes" aria-label="Schwerpunkte">
+              <span class="chip">Unabh&auml;ngiger KFZ Gutachter</span>
+              <span class="chip">Schadengutachten KFZ</span>
+              <span class="chip">Fahrzeugbewertung</span>
+            </div>
+          </div>
+
+          <div class="visual-stack" aria-label="Fahrzeugbegutachtung">
+            <article class="photo-card main glass tilt">
+              <img
+                class="photo"
+                src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1300&q=84"
+                alt="Professionelle Begutachtung eines Fahrzeugs in einer Werkstatt"
+              />
+            </article>
+            <article class="photo-card small glass tilt">
+              <img
+                class="photo"
+                src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=84"
+                alt="Sauber fotografierter dunkler PKW als Detailmotiv f&uuml;r Fahrzeugbewertung"
+              />
+            </article>
+            <div class="pulse-ring" aria-hidden="true">Vor Ort<br />bereit</div>
+            <aside class="floating-panel glass">
+              <div class="panel-title">
+                <strong>Schadenaufnahme</strong>
+                <span class="tag">Neutral</span>
+              </div>
+              <div class="bar-row"><span>Dokumentation</span><strong>92%</strong></div>
+              <div class="bar" aria-hidden="true"><span></span></div>
+              <div class="mini-stats">
+                <div class="mini-stat"><strong>§249</strong><span>BGB-konform</span></div>
+                <div class="mini-stat"><strong>24h</strong><span>Rasche R&uuml;ckmeldung</span></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="leistungen" class="reveal" aria-labelledby="leistungen-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker">Leistungen</div>
+              <h2 id="leistungen-title">Klarheit f&uuml;r Schaden, Wert und n&auml;chste Schritte.</h2>
+            </div>
+            <p class="section-copy">
+              Die Inhalte der bestehenden Website bleiben erhalten, werden aber schneller erfassbar: erst Soforthilfe,
+              dann die relevanten Gutachtenpunkte, danach Kontakt.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card glass tilt">
+              <div>
+                <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13h18l-2-5a3 3 0 0 0-2.8-2H7.8A3 3 0 0 0 5 8l-2 5Z" /><path d="M5 13v5" /><path d="M19 13v5" /><circle cx="7" cy="18" r="2" /><circle cx="17" cy="18" r="2" /></svg></div>
+                <h3>KFZ-Schadengutachten</h3>
+                <p>Bei einem unverschuldeten Autounfall pr&uuml;fe ich den Schaden unabh&auml;ngig und fachlich sauber.</p>
+              </div>
+              <ul class="service-list">
+                <li>Erfassung s&auml;mtlicher Fahrzeugsch&auml;den</li>
+                <li>Ermittlung der Schadenh&ouml;he</li>
+                <li>Nutzungsausfallentsch&auml;digung</li>
+              </ul>
+            </article>
+
+            <article class="service-card glass tilt">
+              <div>
+                <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 11 3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg></div>
+                <h3>Unfallgutachten</h3>
+                <p>Ein Gutachten schafft die Grundlage f&uuml;r eine professionelle Schadensabwicklung mit der Versicherung.</p>
+              </div>
+              <ul class="service-list">
+                <li>Wertminderung des Fahrzeugs</li>
+                <li>Wiederbeschaffungswert</li>
+                <li>Restwert des Fahrzeugs</li>
+              </ul>
+            </article>
+
+            <article class="service-card glass tilt">
+              <div>
+                <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 5 3.5 7.5 8 8 4.5-.5 8-3 8-8V7l-8-4Z" /><path d="M9 12l2 2 4-5" /></svg></div>
+                <h3>Kosten im Haftpflichtschaden</h3>
+                <p>Nach aktueller Rechtsprechung werden die Gutachterkosten im Haftpflichtschadenfall regelm&auml;&szlig;ig von der gegnerischen Versicherung getragen.</p>
+              </div>
+              <ul class="service-list">
+                <li>Unabh&auml;ngige Bewertung</li>
+                <li>Klare Dokumentation</li>
+                <li>Kompetente Begleitung</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="marquee" aria-hidden="true">
+            <div class="track">
+              <span>KFZ Gutachter Schweinfurt</span><span>KFZ Sachverst&auml;ndiger Grafenrheinfeld</span><span>Unfallgutachten Schweinfurt</span><span>Schadengutachten KFZ</span><span>Unabh&auml;ngiger KFZ Gutachter</span><span>Fahrzeugbewertung</span>
+              <span>KFZ Gutachter Schweinfurt</span><span>KFZ Sachverst&auml;ndiger Grafenrheinfeld</span><span>Unfallgutachten Schweinfurt</span><span>Schadengutachten KFZ</span><span>Unabh&auml;ngiger KFZ Gutachter</span><span>Fahrzeugbewertung</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ablauf" class="reveal" aria-labelledby="ablauf-title">
+        <div class="shell">
+          <div class="process-wrap">
+            <aside class="callout glass">
+              <div class="section-kicker">Ablauf nach Unfall</div>
+              <h3 id="ablauf-title">Einfach, schnell, nachvollziehbar.</h3>
+              <p>
+                Nach einem Unfall z&auml;hlt Orientierung. Die Seite f&uuml;hrt Besucher deshalb mit klaren Schritten direkt zur
+                passenden Kontaktaufnahme.
+              </p>
+              <div class="tag-cloud">
+                <span class="tag">Anrufen</span>
+                <span class="tag">Schaden sichern</span>
+                <span class="tag">Gutachten erhalten</span>
+              </div>
+            </aside>
+            <div class="steps">
+              <article class="step-card glass tilt">
+                <div class="step-number">1</div>
+                <h3>Kontakt aufnehmen</h3>
+                <p>Direkt anrufen oder per E-Mail schildern, was passiert ist. Kurze Wege, schnelle R&uuml;ckmeldung.</p>
+              </article>
+              <article class="step-card glass tilt">
+                <div class="step-number">2</div>
+                <h3>Fahrzeugschaden erfassen</h3>
+                <p>Der Schaden wird technisch dokumentiert, fotografiert und f&uuml;r die weitere Abwicklung aufbereitet.</p>
+              </article>
+              <article class="step-card glass tilt">
+                <div class="step-number">3</div>
+                <h3>Schadenh&ouml;he ermitteln</h3>
+                <p>Reparaturkosten, Wertminderung, Nutzungsausfall, Restwert und Wiederbeschaffungswert werden bewertet.</p>
+              </article>
+              <article class="step-card glass tilt">
+                <div class="step-number">4</div>
+                <h3>Abwicklung starten</h3>
+                <p>Das Gutachten bildet die Grundlage f&uuml;r die Regulierung mit der gegnerischen Versicherung.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="wertgutachten" class="reveal" aria-labelledby="wert-title">
+        <div class="shell split">
+          <div class="image-feature glass tilt">
+            <img
+              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=84"
+              alt="Detailaufnahme eines hochwertigen Fahrzeugs f&uuml;r Wertgutachten und Fahrzeugbewertung"
+            />
+            <div class="image-caption glass">
+              <strong>Wertgutachten f&uuml;r besondere Fahrzeuge</strong>
+              <span>Oldtimer, Youngtimer, klassische Motorr&auml;der, Traktoren und modifizierte Fahrzeuge.</span>
+            </div>
+          </div>
+          <article class="value-card glass">
+            <div class="section-kicker">Wertgutachten</div>
+            <h2 id="wert-title">Den Wert sichern, bevor er wichtig wird.</h2>
+            <p>
+              Als Classic Analytics Bewertungspartner ermittle ich den Zustand und Wert Ihres Oldtimers, Youngtimers,
+              klassischen Traktors, klassischen Motorrades oder modifizierten Fahrzeugs.
+            </p>
+            <ul class="service-list">
+              <li>bei Kauf oder Verkauf eines Fahrzeugs</li>
+              <li>zur Wertdarstellung im Schadenfall</li>
+              <li>bei Abschluss einer Oldtimerversicherung</li>
+              <li>bei kostspieligen Sammlerst&uuml;cken</li>
+              <li>nach Restaurierung, Reparatur oder Tuning-Ma&szlig;nahmen</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="reveal" aria-labelledby="faq-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker">FAQ</div>
+              <h2 id="faq-title">Antworten, die Unfallgesch&auml;digte sofort brauchen.</h2>
+            </div>
+            <p class="section-copy">
+              Kurze, vertrauensbildende Antworten nehmen Unsicherheit aus dem Moment direkt nach einem Unfall.
+            </p>
+          </div>
+          <div class="faq-grid">
+            <article class="faq-card glass tilt">
+              <h3>Warum ein unabh&auml;ngiger Gutachter?</h3>
+              <p>Ein unabh&auml;ngiger KFZ Gutachter bewertet den Schaden neutral und ist nicht an die Interessen der gegnerischen Versicherung gebunden.</p>
+            </article>
+            <article class="faq-card glass tilt">
+              <h3>Wer tr&auml;gt die Kosten?</h3>
+              <p>Im Haftpflichtschadenfall werden die Kosten f&uuml;r das Schadengutachten nach §249 BGB regelm&auml;&szlig;ig von der gegnerischen Versicherung &uuml;bernommen.</p>
+            </article>
+            <article class="faq-card glass tilt">
+              <h3>Welche Region wird betreut?</h3>
+              <p>Grafenrheinfeld, Schweinfurt, Schonungen und die umliegende Region.</p>
+            </article>
+            <article class="faq-card glass tilt">
+              <h3>Wann lohnt sich ein Wertgutachten?</h3>
+              <p>Vor Kauf oder Verkauf, nach Restaurierung, f&uuml;r Versicherungen und immer dann, wenn ein belegbarer Fahrzeugwert wichtig ist.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" class="contact-section reveal" aria-labelledby="kontakt-title">
+        <div class="shell">
+          <div class="contact-card glass">
+            <div>
+              <div class="section-kicker">Kontakt</div>
+              <h2 id="kontakt-title">Soforthilfe f&uuml;r Ihr Gutachten im Raum Schweinfurt.</h2>
+              <p class="lead">
+                Nils Calhoun ist in Grafenrheinfeld erreichbar. Die Adresse ist &uuml;berall als Google-Maps-Link hinterlegt.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <a class="contact-link" href="tel:+4915904026857">
+                <strong>0159 04026857</strong><span>Anrufen</span>
+              </a>
+              <a class="contact-link" href="mailto:sv-calhoun@web.de">
+                <strong>sv-calhoun@web.de</strong><span>E-Mail</span>
+              </a>
+              <a
+                class="contact-link"
+                href="https://www.google.com/maps/place/KFZ-Sachverst%C3%A4ndiger+Nils+Calhoun/@50.0041155,10.1963686,15z/data=!4m6!3m5!1s0x47a259c963fb60f7:0xde3efe15b50f9aa5!8m2!3d50.0058477!4d10.1940272!16s%2Fg%2F11k4hhm_xt?entry=ttu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>F&auml;hrdammstra&szlig;e 13, 97506 Grafenrheinfeld</strong><span>Maps</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-inner">
+        <span>Demo-Redesign-Vorschau f&uuml;r KFZ-Sachverst&auml;ndiger Nils Calhoun.</span>
+        <a
+          href="https://www.google.com/maps/place/KFZ-Sachverst%C3%A4ndiger+Nils+Calhoun/@50.0041155,10.1963686,15z/data=!4m6!3m5!1s0x47a259c963fb60f7:0xde3efe15b50f9aa5!8m2!3d50.0058477!4d10.1940272!16s%2Fg%2F11k4hhm_xt?entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer"
+          >F&auml;hrdammstra&szlig;e 13, 97506 Grafenrheinfeld</a
+        >
+      </div>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+
+      window.addEventListener("pointermove", (event) => {
+        root.style.setProperty("--mx", `${event.clientX}px`);
+        root.style.setProperty("--my", `${event.clientY}px`);
+      });
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+            }
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+
+      document.querySelectorAll(".tilt").forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - 0.5;
+          const y = (event.clientY - rect.top) / rect.height - 0.5;
+          card.style.transform = `perspective(900px) rotateX(${y * -5}deg) rotateY(${x * 6}deg) translateY(-6px) scale(1.018)`;
+        });
+
+        card.addEventListener("pointerleave", () => {
+          card.style.transform = "";
+        });
+      });
+    </script>
+  </body>
+</html>
