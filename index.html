@@ -324,6 +324,12 @@
         color: #08090d;
       }
 
+      .mini-cta.interactive-hover {
+        width: 176px;
+        min-height: 48px;
+        padding: 0;
+      }
+
       .hero {
         position: relative;
         min-height: 100vh;
@@ -474,12 +480,14 @@
         height: 8px;
         border-radius: 999px;
         background: var(--primary);
-        transform: scale(1);
+        opacity: 0;
+        transform: scale(0.2);
         transition:
           left 300ms ease,
           top 300ms ease,
           width 300ms ease,
           height 300ms ease,
+          opacity 180ms ease,
           transform 300ms ease,
           border-radius 300ms ease;
       }
@@ -500,6 +508,7 @@
         width: 100%;
         height: 100%;
         border-radius: inherit;
+        opacity: 1;
         transform: scale(1.85);
       }
 
@@ -1253,7 +1262,14 @@
           >Adresse</a
         >
       </nav>
-      <a class="mini-cta" href="tel:+4915904026857">0159 04026857</a>
+      <a class="mini-cta interactive-hover" href="tel:+4915904026857" aria-label="0159 04026857 anrufen">
+        <span class="button-label">0159 04026857</span>
+        <span class="button-hover-label">
+          Anrufen
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+        </span>
+        <span class="button-bubble" aria-hidden="true"></span>
+      </a>
     </header>
 
     <main id="main">
